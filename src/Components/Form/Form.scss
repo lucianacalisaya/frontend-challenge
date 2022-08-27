@@ -1,0 +1,68 @@
+@import '../../scss/style.scss';
+.form {
+    margin: 85px 15vw 0 15vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__title {
+        @include title-bold-sans(32px, lighten($brand-color-indigo, 25%));
+    }
+    &__body {
+        margin-top: 25px;
+        width: 100%;
+        max-width: 600px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 25px;
+    }
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        &--center {
+            justify-content: center;
+            input {
+                margin-right: 8px;
+            }
+        }
+        &--end {
+            justify-content: center;
+        }
+    }
+    &__label {
+        @include paragraph-sans(16px, $basic-black);
+    }
+    &__fill {
+        min-width: 180px;
+        width: 75%;
+        max-width: 450px;
+        border: none;
+        height: 32px;
+        padding: 0 8px;
+        border-radius: 5px;
+        box-shadow: inset 0px 0px 4px 0px $spread-grey4;
+        &--reasons {
+            height: fit-content;
+            box-shadow: none;
+            input {
+                margin-bottom: 8px;
+                margin-right: 8px;
+                border-color: $spread-grey2;
+            }
+        }
+    }
+    &__send {
+        padding: 8px;
+        width: 90px;
+        background-color: $brand-color-indigo;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: 0.1s linear;
+        @include text-button-bold-sans(16px, $basic-white);
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+}

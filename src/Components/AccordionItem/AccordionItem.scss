@@ -1,0 +1,43 @@
+@import '../../scss/style.scss';
+.accordion__item {
+    border-top: 1px solid $neutral-white;
+}
+.accordion__button {
+    font-size: 16px;
+    background-color: lighten($brand-color-indigo, 5%);
+    color:$neutral-white;
+    text-align: left;
+    font-weight: 700;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .accordion__control {
+    font-size: 20px;
+  }
+  
+  .accordion__answer {
+    background-color: $neutral-white;
+    padding: 20px;
+  }
+  
+  /* activate toggle */
+  .accordion__item.active .accordion__button {
+    background-color: darken($brand-color-indigo, 5%);
+  }
+  .accordion__wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: height ease 0.2s;
+  }
+  /* .answer__wrapper.open {
+    height: auto;
+  } */
+  
+  
